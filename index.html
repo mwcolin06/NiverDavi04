@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aniversário do Davi - 4 anos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Vídeo de fundo */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.4);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 1.5em;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    .foto-davi {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background: #ff66cc;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+    }
+
+    .btn:hover {
+      background: #ff3399;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop class="video-background">
+    <source src="tronco.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos em HTML5.
+  </video>
+
+  <!-- Conteúdo -->
+  <div class="overlay">
+    <img src="foto-davi.jpeg" alt="Foto do Davi" class="foto-davi">
+    <h1>🎉 Aniversário do Davi 🎉</h1>
+    <h2>Venha comemorar os 4 aninhos! <br> Dia 08 de novembro</h2>
+
+    <a href="https://wa.me/SEUNUMERO" class="btn" target="_blank" rel="noopener noreferrer">✅ Confirme sua Presença</a>
+    <a href="https://maps.google.com/?q=SEU+ENDERECO" class="btn" target="_blank" rel="noopener noreferrer">📍 Local da Festa</a>
+    <a href="https://docs.google.com/SEULINKLISTA" class="btn" target="_blank" rel="noopener noreferrer">🎁 Sugestões de Presente</a>
+  </div>
+
+</body>
+</html>
