@@ -81,12 +81,21 @@
       background: #0000ff;
       transform: scale(1.05);
     }
+
+    #audio-btn {
+      margin-top: 20px;
+      background: #ff9900;
+    }
+
+    #audio-btn:hover {
+      background: #ff6600;
+    }
   </style>
 </head>
 <body>
 
   <!-- Vídeo de fundo -->
-  <video autoplay muted loop class="video-background">
+  <video autoplay loop muted id="bg-video" class="video-background">
     <source src="tronco.mp4" type="video/mp4">
     Seu navegador não suporta vídeos em HTML5.
   </video>
@@ -97,6 +106,7 @@
     <h1>🎉 Aniversário do Davi 🎉</h1>
     <h2>Venha comemorar os 4 aninhos! <br> Dia 08 de novembro</h2>
 
+
      <a href="https://wa.me/5511932970799?text=Eu%20confirmo%20minha%20presen%C3%A7a%20no%20niver%20do%20Davi%0A" 
        class="btn" target="_blank" rel="noopener noreferrer">✅ Confirme sua Presença</a>
 
@@ -105,8 +115,19 @@
 
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvJWR7lj4SE9VNPTbUyN5p922CES8xBb93v2KJovsnT9JAhg/viewform?usp=header" 
        class="btn" target="_blank" rel="noopener noreferrer">🎁 Sugestões de Presente</a>
+    <!-- Botão para ligar/desligar áudio -->
+    <button id="audio-btn" class="btn" onclick="toggleAudio()">🔊 Ativar Som</button>
   </div>
+
+  <script>
+    const video = document.getElementById("bg-video");
+    const btn = document.getElementById("audio-btn");
+
+    function toggleAudio() {
+      video.muted = !video.muted;
+      btn.textContent = video.muted ? "🔊 Ativar Som" : "🔇 Desativar Som";
+    }
+  </script>
 
 </body>
 </html>
-
